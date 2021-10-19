@@ -3,7 +3,7 @@
   <xsl:template match="/testResults">
     <xsl:variable name="times" select="./httpSample/@t" />
     <xsl:variable name="failures" select="./httpSample/assertionResult/failureMessage" />
-    <xsl:variable name="threshold" select="1000" />
+    <xsl:variable name="threshold" select="3000" />
     <testsuite>
       <xsl:attribute name="tests"><xsl:value-of select="count($times)" /></xsl:attribute>
       <xsl:attribute name="failures"><xsl:value-of select="count($failures)" /></xsl:attribute> 
